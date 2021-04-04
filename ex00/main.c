@@ -6,14 +6,12 @@
 /*   By: sejeong <sejeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 14:53:27 by sejeong           #+#    #+#             */
-/*   Updated: 2021/04/04 20:58:19 by sejeong          ###   ########.fr       */
+/*   Updated: 2021/04/04 22:14:59 by sejeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	init_set(void);
-int		helper(int (*board)[5], int row, int column, int *data);
+#include "helper.h"
 
 int		check_argv(char *str, int data[])
 {
@@ -22,7 +20,7 @@ int		check_argv(char *str, int data[])
 
 	word_count = 0;
 	i = 0;
-	while (word_count < 16 && str[i] != '\0')
+	while (word_count < 16 && str[i] != '\0' && i < 31)
 	{
 		if (i % 2 == 0)
 		{
@@ -34,7 +32,7 @@ int		check_argv(char *str, int data[])
 				word_count++;
 			}
 		}
-		else if (str[i] != ' ' && str[i] < 9 && str[i] > 13)
+		else if (str[i] != ' ' && (str[i] < 9 || str[i] > 13))
 			return (1);
 		i++;
 	}

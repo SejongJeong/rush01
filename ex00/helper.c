@@ -6,14 +6,14 @@
 /*   By: sejeong <sejeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 20:54:24 by sejeong           #+#    #+#             */
-/*   Updated: 2021/04/04 20:57:41 by sejeong          ###   ########.fr       */
+/*   Updated: 2021/04/04 21:51:06 by sejeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "valid.h"
+
 int		g_set_row[5][5];
 int		g_set_col[5][5];
-
-int		is_valid(int (*board)[5], int *data);
 
 void	set_board(int (*board)[5], int row, int column, int num)
 {
