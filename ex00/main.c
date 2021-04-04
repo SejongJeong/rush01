@@ -6,7 +6,7 @@
 /*   By: sejeong <sejeong@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 14:53:27 by sejeong           #+#    #+#             */
-/*   Updated: 2021/04/04 22:14:59 by sejeong          ###   ########.fr       */
+/*   Updated: 2021/04/04 22:22:32 by sejeong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		check_argv(char *str, int data[])
 			return (1);
 		i++;
 	}
-	if (word_count == 16 && i == 31)
+	if (word_count == 16 && i == 31 && str[i] == '\0')
 		return (0);
 	else
 		return (1);
